@@ -46,6 +46,17 @@ body {
   background-image: url("img/icon-phone.svg");
 }
 
+.nav {
+  margin: 0 50px 0 0;
+  text-align: end;
+}
+
+a {
+  font-size: large;
+  color: red;
+  font-weight: bold;
+}
+
 .hero-image {
   margin-bottom: 480px;
 }
@@ -139,8 +150,12 @@ body {
   margin: 200px 0 120px;
 }
 
+.table {
+  margin: 0 50px 0 -100px;
+}
+
 td {
-  padding-right: 50px;
+  padding-right: 25px;
   
 }
 

@@ -1,0 +1,28 @@
+body {
+    background: linear-gradient(45deg, white, red);
+}
+
+div {
+    color: darkorange;
+    border: solid 2px;
+    background-color: red;
+}
+
+h1 {
+    text-align: center;
+    font-size: 64px;
+    color: white;
+}
+
+img {
+    width: 500px;
+    height: 500px;
+    filter: blur(2px) brightness(50%) contrast(200%) opacity(250%);
+    border: solid 5px red;
+    border-radius: 250px 0 250px 0;
+}
+
+span {
+    font-weight: bold;
+    color: white;
+}
