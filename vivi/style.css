@@ -1,9 +1,55 @@
-h1 {
+.container-fluid {
+    border: sandybrown solid 1px;
+    padding: 10px;
+}
+
+.row .col {
+    border: 1px solid salmon;
+    padding: 2px;
+}
+
+
+
+/* h1 {
     text-align: center;
 }
 
 .container {
-    display: flex;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-areas: 
+    "header header header header header header header"
+    "sidebar main main main main main description"
+    "sidebar main main main main main description"
+    "footer footer footer footer footer footer footer";
+}
+
+.item {
+    background-color: bisque;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    width: auto;
+}
+
+.main {
+    grid-area: main;
+}
+
+.description {
+    grid-area: description;
+}
+
+.footer {
+    grid-area: footer;
 }
 
 .containerItem {
@@ -34,4 +80,4 @@ a {
 h4 {
     text-align: center;
 }
-
+ */
