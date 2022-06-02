@@ -8,9 +8,45 @@
     padding: 2px;
 }
 
+.games {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 10px;
+    margin: 20px;
+    background-image: url('');
+    background-repeat: no-repeat;
+}
 
+h4 {
+    padding: 10px;
+    margin: 20px;
+    margin-right: 1rem;
+    text-align: center;
+}
 
-/* h1 {
+img {
+    width: 200px;
+    height: 200px;
+    max-width: 100%;
+    object-fit: cover;
+    margin: 20px;
+    object-fit: cover;
+    background-color: gray;
+}
+
+p {
+    width: 300px;
+    height: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overscroll-behavior-y: contain;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+}
+
+h1 {
     text-align: center;
 }
 
@@ -38,6 +74,9 @@
 .sidebar {
     grid-area: sidebar;
     width: auto;
+    align-self: start;
+    position: sticky;
+    top: 1rem;
 }
 
 .main {
@@ -76,8 +115,3 @@ a {
     background-color: azure;
     flex: 2 1 auto;
 }
-
-h4 {
-    text-align: center;
-}
- */

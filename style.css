@@ -119,12 +119,32 @@ a {
   background-position: left;
 }
 
+.skill_java {
+  background-image: url("");
+}
+
+.skill_android-studio {
+  background-image: url("");
+}
+
+.skill_kotlin {
+  background-image: url("");
+}
+
 .skill-html {
   /* background-image: url("img/icon-html.svg"); */
 }
 
 .skill-css {
   /* background-image: url("img/icon-css.svg"); */
+}
+
+.skill_javascript {
+  background-image: url("");
+}
+
+.skill_react {
+  background-image: url("");
 }
 
 .level {
