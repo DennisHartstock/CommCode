@@ -1,3 +1,6 @@
+// import React from "react";
+// import ReactDom from "react-dom";
+
 class ReactComponentClass extends React.Component {
 
     constructor(props) {
@@ -71,7 +74,15 @@ class ReactComponentClass extends React.Component {
 //     )
 // }
 
+// const container = document.getElementById('root');
+// const root = ReactDOM.createRoot(container);
+// root.render(<ReactComponentClass name="Vita" />);
+
 ReactDOM.render(
+
+// <h1>Hello, John</h1>,
+// document.getElementById("root")
+
     <ReactComponentClass name="Vita" />,
     document.getElementById("root")
 
