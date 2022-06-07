@@ -24,6 +24,16 @@
 
         update: function (gameSize) {
 
+            var bodies = this.bodies;
+
+            var notCollidingWithAnything = function(b1) {
+                return bodies.filter(function(b2) {
+                    return colliding(b1, b2);
+                }).length == 0;
+            }
+
+            this.bodies = this.bodies.filter(notCollidingWithAnything);
+
             for (var i = 0; i < this.bodies.length; i++) {
                 if (this.bodies[i].position.y < 0) {
                     this.bodies.splice(i, 1);
@@ -87,7 +97,10 @@
 
             if (this.keyboarder.isDown(this.keyboarder.KEYS.SPACE)) {
                 if (this.bullets < 5) {
-                    var bullet = new Bullet({ x: this.position.x + this.size.width / 2 - 1, y: this.position.y }, { x: 0, y: -6 });
+                    var bullet = new Bullet(
+                        { x: this.position.x + this.size.width / 2 - 1, y: this.position.y },
+                        { x: 0, y: -4 }
+                    );
                     this.game.addBody(bullet);
                     this.bullets++;
                 }
@@ -142,6 +155,24 @@
         }
         return invaders;
     }
+
+    // var colliding = function (b1, b2) {
+    //     return !(b1 == b2 ||
+    //         b1.position.x + b1.size.width / 2 < b2.position.x - b2.size.width / 2 ||
+    //         b1.position.y + b1.size.height / 2 < b2.position.y - b2.size.height / 2 ||
+    //         b1.position.x - b1.size.width / 2 > b2.position.x + b2.size.width / 2 ||
+    //         b1.position.y - b1.size.height / 2 > b2.position.y + b2.size.height / 2
+    //     );
+    // }
+
+    var colliding = function(b1, b2) {
+        return (b1 != b2 && 
+         b1.position.x < b2.position.x + b2.size.width  && 
+         b1.position.x + b1.size.width  > b2.position.x &&
+         b1.position.y < b2.position.y + b2.size.height && 
+         b1.position.y + b1.size.height > b2.position.y);
+       }
+
 
     var drawRect = function (screen, body) {
         screen.fillRect(body.position.x, body.position.y, body.size.width, body.size.height);
