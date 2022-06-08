@@ -73,6 +73,15 @@
 
             this.position.x += this.speedX;
             this.patrolX += this.speedX;
+
+            if(Math.random() < 0.05) {
+                var bullet = new Bullet(
+                { x: this.position.x + this.size.width / 2 - 3/2, y: this.position.y-4 },
+                { x: Math.random()-0.5, y: -4 }
+            );
+            this.game.addBody(bullet);
+            }
+            
         }
     }
 
