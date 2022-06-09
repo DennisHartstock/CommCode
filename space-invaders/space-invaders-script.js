@@ -71,15 +71,17 @@
         this.position = position;
         this.patrolX = 0;
         this.speedX = 0.3;
+        this.speedY = 0.1;
     }
 
     Invader.prototype = {
         update: function () {
-            if (this.patrolX < 0 || this.patrolX > 800) {
-                this.speedX -= this.speedX;
+            if (this.patrolX < 0 || this.patrolX > 500) {
+                this.speedX = -this.speedX;
             }
 
             this.position.x += this.speedX;
+            this.position.y += this.speedY;
             this.patrolX += this.speedX;
 
             if (Math.random() < 0.01 && !this.game.invadersBelow(this)) {
@@ -171,8 +173,8 @@
         var invaders = [];
 
         for (var i = 0; i < 24; i++) {
-            var x = 100 + (i % 8) * 100;
-            var y = 30 + (i % 5) * 30;
+            var x = 30 + (i % 8) * 30;
+            var y = 30 + (i % 3) * 30;
             invaders.push(new Invader(game, { x: x, y: y }));
         }
         return invaders;
