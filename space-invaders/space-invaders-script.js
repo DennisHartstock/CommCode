@@ -26,8 +26,8 @@
 
             var bodies = this.bodies;
 
-            var notCollidingWithAnything = function(b1) {
-                return bodies.filter(function(b2) {
+            var notCollidingWithAnything = function (b1) {
+                return bodies.filter(function (b2) {
                     return colliding(b1, b2);
                 }).length == 0;
             }
@@ -35,7 +35,7 @@
             this.bodies = this.bodies.filter(notCollidingWithAnything);
 
             for (var i = 0; i < this.bodies.length; i++) {
-                if (this.bodies[i].position.y < 0) {
+                if (this.bodies[i].position.y < 0  || this.bodies[i].position.y > gameSize.y) {
                     this.bodies.splice(i, 1);
                 }
             }
@@ -54,12 +54,20 @@
 
         addBody: function (body) {
             this.bodies.push(body);
+        },
+
+        invadersBelow: function (invader) {
+            return this.bodies.filter(function (b) {
+                return b instanceof Invader &&
+                    b.position.y > invader.position.y &&
+                    b.position.x - invader.position.x < invader.size.width;
+            }).length > 0;
         }
     }
 
     var Invader = function (game, position) {
         this.game = game;
-        this.size = { width: 16, height: 16 };
+        this.size = { width: 10, height: 16 };
         this.position = position;
         this.patrolX = 0;
         this.speedX = 0.3;
@@ -74,14 +82,14 @@
             this.position.x += this.speedX;
             this.patrolX += this.speedX;
 
-            if(Math.random() < 0.05) {
+            if (Math.random() < 0.01 && !this.game.invadersBelow(this)) {
                 var bullet = new Bullet(
-                { x: this.position.x + this.size.width / 2 - 3/2, y: this.position.y-4 },
-                { x: Math.random()-0.5, y: -4 }
-            );
-            this.game.addBody(bullet);
+                    { x: this.position.x + this.size.width / 2 - 3 / 2, y: this.position.y + this.size.height},
+                    { x: Math.random() - 0.5, y: 2 }
+                );
+                this.game.addBody(bullet);
             }
-            
+
         }
     }
 
@@ -90,22 +98,27 @@
         this.bullets = 0;
         this.timer = 0;
         this.size = { width: 16, height: 16 };
-        this.position = { x: gameSize.x / 2 - this.size.width / 2, y: gameSize.y / 2 - this.size.height / 2 };
+        this.position = { x: gameSize.x / 2 - this.size.width / 2, y: gameSize.y / 1.25 - this.size.height / 2 };
         this.keyboarder = new Keyboarder();
     }
 
     Player.prototype = {
         update: function () {
             if (this.keyboarder.isDown(this.keyboarder.KEYS.LEFT)) {
-                this.position.x -= 2;
+                if(this.position.x > 10) {
+                    this.position.x -= 2;
+                }
+                
             }
 
             if (this.keyboarder.isDown(this.keyboarder.KEYS.RIGHT)) {
-                this.position.x += 2;
-            }
+                if(this.position.x < 800 - 26) {
+                    this.position.x += 2;
+                }
+             }
 
             if (this.keyboarder.isDown(this.keyboarder.KEYS.SPACE)) {
-                if (this.bullets < 5) {
+                if (this.bullets < 1) {
                     var bullet = new Bullet(
                         { x: this.position.x + this.size.width / 2 - 1, y: this.position.y },
                         { x: 0, y: -4 }
@@ -158,8 +171,8 @@
         var invaders = [];
 
         for (var i = 0; i < 24; i++) {
-            var x = 30 + (i % 8) * 30;
-            var y = 30 + (i % 3) * 30;
+            var x = 100 + (i % 8) * 100;
+            var y = 30 + (i % 5) * 30;
             invaders.push(new Invader(game, { x: x, y: y }));
         }
         return invaders;
@@ -174,13 +187,13 @@
     //     );
     // }
 
-    var colliding = function(b1, b2) {
-        return (b1 != b2 && 
-         b1.position.x < b2.position.x + b2.size.width  && 
-         b1.position.x + b1.size.width  > b2.position.x &&
-         b1.position.y < b2.position.y + b2.size.height && 
-         b1.position.y + b1.size.height > b2.position.y);
-       }
+    var colliding = function (b1, b2) {
+        return (b1 != b2 &&
+            b1.position.x < b2.position.x + b2.size.width &&
+            b1.position.x + b1.size.width > b2.position.x &&
+            b1.position.y < b2.position.y + b2.size.height &&
+            b1.position.y + b1.size.height > b2.position.y);
+    }
 
 
     var drawRect = function (screen, body) {
