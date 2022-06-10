@@ -11,13 +11,15 @@
         this.bodies = createInvaders(this).concat([new Player(this, gameSize)]);
 
         var self = this;
-        var tick = function () {
-            self.update(gameSize);
-            self.draw(screen, gameSize);
-            requestAnimationFrame(tick);
-        };
-
-        tick();
+        loadSound("shoot.wav", function (shootSound) {
+            self.shootSound = shootSound;
+            var tick = function () {
+                self.update(gameSize);
+                self.draw(screen, gameSize);
+                requestAnimationFrame(tick);
+            }
+            tick();
+        });
     }
 
     Game.prototype = {
@@ -35,7 +37,7 @@
             this.bodies = this.bodies.filter(notCollidingWithAnything);
 
             for (var i = 0; i < this.bodies.length; i++) {
-                if (this.bodies[i].position.y < 0  || this.bodies[i].position.y > gameSize.y) {
+                if (this.bodies[i].position.y < 0 || this.bodies[i].position.y > gameSize.y) {
                     this.bodies.splice(i, 1);
                 }
             }
@@ -86,7 +88,7 @@
 
             if (Math.random() < 0.01 && !this.game.invadersBelow(this)) {
                 var bullet = new Bullet(
-                    { x: this.position.x + this.size.width / 2 - 3 / 2, y: this.position.y + this.size.height},
+                    { x: this.position.x + this.size.width / 2 - 3 / 2, y: this.position.y + this.size.height },
                     { x: Math.random() - 0.5, y: 2 }
                 );
                 this.game.addBody(bullet);
@@ -107,17 +109,17 @@
     Player.prototype = {
         update: function () {
             if (this.keyboarder.isDown(this.keyboarder.KEYS.LEFT)) {
-                if(this.position.x > 10) {
+                if (this.position.x > 10) {
                     this.position.x -= 2;
                 }
-                
+
             }
 
             if (this.keyboarder.isDown(this.keyboarder.KEYS.RIGHT)) {
-                if(this.position.x < 800 - 26) {
+                if (this.position.x < 800 - 26) {
                     this.position.x += 2;
                 }
-             }
+            }
 
             if (this.keyboarder.isDown(this.keyboarder.KEYS.SPACE)) {
                 if (this.bullets < 1) {
@@ -127,6 +129,8 @@
                     );
                     this.game.addBody(bullet);
                     this.bullets++;
+                    this.game.shootSound.load();
+                    this.game.shootSound.play();
                 }
             }
 
@@ -197,6 +201,17 @@
             b1.position.y + b1.size.height > b2.position.y);
     }
 
+    var loadSound = function (url, callback) {
+
+        var loaded = function () {
+            callback(sound);
+            sound.removeEventListener("canplaythrough", loaded);
+        }
+
+        var sound = new Audio(url);
+        sound.addEventListener("canplaythrough", loaded);
+        sound.load();
+    }
 
     var drawRect = function (screen, body) {
         screen.fillRect(body.position.x, body.position.y, body.size.width, body.size.height);
