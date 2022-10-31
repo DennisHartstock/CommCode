@@ -11,6 +11,14 @@ body {
   background-position: top center;
 }
 
+button {
+background-color: #080208;
+float: right;
+margin-left: 50%;
+margin-top: 16px;
+margin-right: 32px;
+}
+
 .container {
   max-width: 928px;
   margin: 0 auto;
