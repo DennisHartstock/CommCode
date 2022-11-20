@@ -12,8 +12,9 @@ body {
 }
 
 button {
-background-color: #080208;
+background-color: red;
 float: right;
+color: goldenrod;
 margin-left: 50%;
 margin-top: 16px;
 margin-right: 32px;
