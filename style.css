@@ -12,12 +12,12 @@ body {
 }
 
 button {
-background-color: red;
-float: right;
-color: goldenrod;
-margin-left: 50%;
-margin-top: 16px;
-margin-right: 32px;
+  background-color: #712073;
+  color: #ffffff;
+  float: right;
+  margin-left: 50%;
+  margin-top: 16px;
+  margin-right: 32px;
 }
 
 .container {
