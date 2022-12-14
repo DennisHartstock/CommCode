@@ -62,7 +62,7 @@ button {
 
 a {
   font-size: large;
-  color: red;
+  color: #fea18d;
   font-weight: bold;
 }
 
@@ -184,8 +184,8 @@ a {
 }
 
 td {
-  padding-right: 25px;
-  
+  padding-top: 25px;
+  padding-right: 50px;
 }
 
 .projects {
@@ -221,7 +221,7 @@ td {
 
 .page-footer {
   padding: 40px 0;
-  background-color: #260c26;
+  /* background-color: #260c26; */
 }
 
 .page-footer a {
