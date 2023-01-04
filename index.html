@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Old+Standard+TT&display=swap&subset=cyrillic">
-    <script src="index.js"></script>
+  <script src="index.js"></script>
   <title>CommCode</title>
 </head>
 
@@ -49,11 +49,12 @@
         <p id="about_me_p1">Меня зовут Денис. Я увлёкся программированием в 2020 году,
           когда из-за пандемии коронавируса весь наш мир погрузился в пучину неопределённости и алогичности.</p>
 
-        <p>Чуть менее чем за год прошёл полный курс изучения Java на <a href="https://javarush.ru/">JAVARUSH</a> и
-          потренировался на тренажёрах <a href="https://htmlacademy.ru/courses">htmlacademy</a>,
-          чтобы получить начальные представления о фронтенде и сверстать эту страницу.</p>
+        <p id="about_me_p2">Чуть менее чем за год прошёл полный курс изучения Java на JAVARUSH и
+          потренировался на тренажёрах HTML Academy, чтобы получить начальные представления о фронтенде и сверстать эту
+          страницу.</p>
 
-        <p>На данный момент я занимаюсь разработкой мобильных приложений в Android Studio, потому что мне нравится
+        <p id="about_me_p3">На данный момент я занимаюсь разработкой мобильных приложений в Android Studio, потому что
+          мне нравится
           создавать вещи, которые могут приносить пользу другим людям.</p>
 
       </div>
@@ -61,19 +62,21 @@
       <div>
         <h3>¡Victoria o muerte!</h3>
 
-        <p>На этой странице вы найдёте различные ресурсы, которые показались мне полезными в процессе изучения
+        <p id="about_me_p4">На этой странице вы найдёте различные ресурсы, которые показались мне полезными в процессе
+          изучения
           программирования.</p>
 
-        <p>Помимо этого я буду выкладывать здесь свои учебные проекты и мобильные приложения.</p>
+        <p id="about_me_p5">Помимо этого я буду выкладывать здесь свои учебные проекты и мобильные приложения.</p>
 
       </div>
 
       <div class="skills">
-        <h3>Мои навыки программирования</h3>
+        <h3 id="skills">Мои навыки программирования <p>(в затраченных на обучение часах)</p>
+        </h3>
         <dl class="skills-list">
           <dt class="skill-java">Java</dt>
           <dd class="level">
-            <div style="width: 93%;"><br>~930 часов</div>
+            <div style="width: 93%;"><br>~930</div>
           </dd>
           <dt class="skill-android-studio">Android Studio</dt>
           <dd class="level">
@@ -106,34 +109,36 @@
 
   <section class="portfolio">
     <div class="container">
-      <h2 class="subheading">Полезные ресурсы</h2>
+      <h2 id="res" class="subheading">Полезные ресурсы</h2>
       <table class="table">
-      <tr>
-        <td>
-          <a href="https://www.udemy.com/course/learne-flutter-dart-und-erstelle-native-ios-android-apps/">
-            Lerne Flutter & Dart und erstelle native iOS & Android Apps
-          </a>
-        </td>
-        <td>
-          <a href="https://www.udemy.com/course/jetpack-compose-devcolibri/">Jetpack Compose с нуля</a>
-        </td>
+        <tr>
+          <td>
+            <a href="https://www.udemy.com/course/learne-flutter-dart-und-erstelle-native-ios-android-apps/">
+              Lerne Flutter & Dart und erstelle native iOS & Android Apps
+            </a>
+          </td>
+          <td>
+            <a href="https://www.udemy.com/course/jetpack-compose-devcolibri/">Jetpack Compose с нуля</a>
+          </td>
         </tr>
         <tr>
-        <td>
-          <a href="https://www.udemy.com/course/android_prof/">Android профессиональный уровень (Kotlin)</a>
-        </td>
-        <td>
-          <a href="https://www.udemy.com/course/android_sumin/">Полный курс Андроид + Java с нуля</a>
-        </td>
-      </tr>
+          <td>
+            <a href="https://www.udemy.com/course/android_prof/">Android профессиональный уровень (Kotlin)</a>
+          </td>
+          <td>
+            <a href="https://www.udemy.com/course/android_sumin/">Полный курс Андроид + Java с нуля</a>
+          </td>
+        </tr>
       </table>
+    </div>
+  </section>
 
-  <section class="portfolio">
-    <div class="container">
-      <h2 class="subheading">Мобильные приложения</h2>
+      <section class="portfolio">
+        <div class="container">
+          <h2 id="my_apps" class="subheading">Мобильные приложения</h2>
 
-      <table class="table">
-       <tr>
+          <table class="table">
+            <tr>
               <td>
                 <h3>Messenger</h3>
               </td>
@@ -148,114 +153,115 @@
               </td>
             </tr>
             <tr>
-              <td><a class="button" href="https://github.com/DennisHartstock/JavaMessenger">Репозиторий на GitHub</a></td>
-              <td><a class="button" href="https://github.com/DennisHartstock/KinopoiskMovies">Репозиторий на GitHub</a></td>
-              <td><a class="button" href="https://github.com/DennisHartstock/ShoppingList">Репозиторий на GitHub</a></td>
-              <td><a class="button" href="https://github.com/DennisHartstock/FlappyBirdClone">Репозиторий на GitHub</a></td>
-            </tr>
-      </table>
-
-      <section class="portfolio">
-        <div class="container">
-          <h2 class="subheading">Учебные проекты</h2>
-
-          <table class="table">
-            <tr>
-              <td>
-                <h3>CryptoApp</h3>
-              </td>
-              <td>
-                <h3>Composition</h3>
-              </td>
-              <td>
-                <h3>ShoppingList</h3>
-              </td>
-              <td>
-                <h3>My favorite movies</h3>
-              </td>
-            </tr>
-            <tr>
-              <td><a class="button" href="https://github.com/DennisHartstock/CryptoApp">Репозиторий на GitHub</a></td>
-              <td><a class="button" href="https://github.com/DennisHartstock/Composition">Репозиторий на GitHub</a></td>
-              <td><a class="button" href="https://github.com/DennisHartstock/ShoppingList">Репозиторий на GitHub</a></td>
-              <td><a class="button" href="https://github.com/DennisHartstock/MyFavoriteMovies">Репозиторий на GitHub</a></td>
+              <td><a class="button" href="https://github.com/DennisHartstock/JavaMessenger">GitHub</a></td>
+              <td><a class="button" href="https://github.com/DennisHartstock/KinopoiskMovies">GitHub</a></td>
+              <td><a class="button" href="https://github.com/DennisHartstock/ShoppingList">GitHub</a></td>
+              <td><a class="button" href="https://github.com/DennisHartstock/FlappyBirdClone">GitHub</a></td>
             </tr>
           </table>
+        </div>
+      </section>
 
-          <table class="table">
-            <tr>
-              <td>
-                <h3>My Contacts</h3>
-              </td>
-              <td>
-                <h3>Cars Db with Room</h3>
-              </td>
-              <td>
-                <h3>Flappy Bird Clone</h3>
-              </td>
-              <td>
-                <h3>Soccer Quiz</h3>
-              </td>
-            </tr>
-            <tr>
-              <td><a class="button" href="https://github.com/DennisHartstock/MyContacts">Репозиторий на GitHub</a></td>
-              <td><a class="button" href="https://github.com/DennisHartstock/CarsDbWithRoom">Репозиторий на GitHub</a>
-              </td>
-              <td><a class="button" href="https://github.com/DennisHartstock/FlappyBirdClone">Репозиторий на GitHub</a>
-              </td>
-              <td><a class="button" href="https://github.com/DennisHartstock/SoccerQuiz">Репозиторий на GitHub</a></td>
-            </tr>
-          </table>
+          <section class="portfolio">
+            <div class="container">
+              <h2 id="projects" class="subheading">Учебные проекты</h2>
 
-          <table class="table">
-            <tr>
-              <td>
-                <h3>Magic 8 Ball</h3>
-              </td>
-              <td>
-                <h3>Taxi App</h3>
-              </td>
-              <td>
-                <h3>Awesome Chat (Firebase)</h3>
-              </td>
-              <td>
-                <h3>Club Olympus (SQLite Database)</h3>
-              </td>
-            </tr>
-            <tr>
-              <td><a class="button" href="https://github.com/DennisHartstock/Magic8Ball">Репозиторий на GitHub</a></td>
-              <td><a class="button" href="https://github.com/DennisHartstock/TaxiApp">Репозиторий на GitHub</a></td>
-              <td><a class="button" href="https://github.com/DennisHartstock/AwesomeChat">Репозиторий на GitHub</a></td>
-              <td><a class="button" href="https://github.com/DennisHartstock/ClubOlympus">Репозиторий на GitHub</a></td>
-            </tr>
-          </table>
+              <table class="table">
+                <tr>
+                  <td>
+                    <h3>CryptoApp</h3>
+                  </td>
+                  <td>
+                    <h3>Composition</h3>
+                  </td>
+                  <td>
+                    <h3>ShoppingList</h3>
+                  </td>
+                  <td>
+                    <h3>My favorite movies</h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a class="button" href="https://github.com/DennisHartstock/CryptoApp">GitHub</a></td>
+                  <td><a class="button" href="https://github.com/DennisHartstock/Composition">GitHub</a></td>
+                  <td><a class="button" href="https://github.com/DennisHartstock/ShoppingList">GitHub</a></td>
+                  <td><a class="button" href="https://github.com/DennisHartstock/MyFavoriteMovies">GitHub</a></td>
+                </tr>
+              </table>
 
-          <table class="table">
-            <tr>
-              <td>
-                <h3>My favorite recipes</h3>
-              </td>
-              <td>
-                <h3>Cool Timer</h3>
-              </td>
-              <td>
-                <h3>Music Shop</h3>
-              </td>
-              <td>
-                <h3>Tom and Jerry</h3>
-              </td>
-              </td>
-            </tr>
-            <tr>
-              <td><a class="button" href="https://github.com/DennisHartstock/MyFavoriteRecipes">Репозиторий на
-                  GitHub</a></td>
-              <td><a class="button" href="https://github.com/DennisHartstock/CoolTimer">Репозиторий на GitHub</a></td>
-              <td><a class="button" href="https://github.com/DennisHartstock/MusicShop">Репозиторий на GitHub</a></td>
-              <td><a class="button" href="https://github.com/DennisHartstock/TomAndJerry">Репозиторий на GitHub</a></td>
-            </tr>
-          </table>
+              <table class="table">
+                <tr>
+                  <td>
+                    <h3>My Contacts</h3>
+                  </td>
+                  <td>
+                    <h3>Cars Db with Room</h3>
+                  </td>
+                  <td>
+                    <h3>Flappy Bird Clone</h3>
+                  </td>
+                  <td>
+                    <h3>Soccer Quiz</h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a class="button" href="https://github.com/DennisHartstock/MyContacts">GitHub</a></td>
+                  <td><a class="button" href="https://github.com/DennisHartstock/CarsDbWithRoom">GitHub</a></td>
+                  <td><a class="button" href="https://github.com/DennisHartstock/FlappyBirdClone">GitHub</a></td>
+                  <td><a class="button" href="https://github.com/DennisHartstock/SoccerQuiz">GitHub</a></td>
+                </tr>
+              </table>
 
-          <!-- <table class="table">
+              <table class="table">
+                <tr>
+                  <td>
+                    <h3>Magic 8 Ball</h3>
+                  </td>
+                  <td>
+                    <h3>Taxi App</h3>
+                  </td>
+                  <td>
+                    <h3>Awesome Chat (Firebase)</h3>
+                  </td>
+                  <td>
+                    <h3>Club Olympus (SQLite Database)</h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a class="button" href="https://github.com/DennisHartstock/Magic8Ball">GitHub</a></td>
+                  <td><a class="button" href="https://github.com/DennisHartstock/TaxiApp">GitHub</a></td>
+                  <td><a class="button" href="https://github.com/DennisHartstock/AwesomeChat">GitHub</a></td>
+                  <td><a class="button" href="https://github.com/DennisHartstock/ClubOlympus">GitHub</a></td>
+                </tr>
+              </table>
+
+              <table class="table">
+                <tr>
+                  <td>
+                    <h3>My favorite recipes</h3>
+                  </td>
+                  <td>
+                    <h3>Cool Timer</h3>
+                  </td>
+                  <td>
+                    <h3>Music Shop</h3>
+                  </td>
+                  <td>
+                    <h3>Tom and Jerry</h3>
+                  </td>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a class="button" href="https://github.com/DennisHartstock/MyFavoriteRecipes">GitHub</a></td>
+                  <td><a class="button" href="https://github.com/DennisHartstock/CoolTimer">GitHub</a></td>
+                  <td><a class="button" href="https://github.com/DennisHartstock/MusicShop">GitHub</a></td>
+                  <td><a class="button" href="https://github.com/DennisHartstock/TomAndJerry">GitHub</a></td>
+                </tr>
+              </table>
+            </div>
+          </section>
+
+              <!-- <table class="table">
             <tr>
               <td>
                 <h3>Магазин товаров для дома</h3>
@@ -290,11 +296,11 @@
               <td><a class="button" href="source/project_site/index.html">Открыть страницу</a></td>
             </tr>
           </table> -->
-        </div>
-      </section>
+            <!-- </div>
+          </section> -->
 
 
-      <!--<h3>Магазин товаров для дома</h3>
+          <!--<h3>Магазин товаров для дома</h3>
           <figure class="project-image">
             <img src="files/gloevk-example.jpg" height="200" alt="Cайт магазина товаров для дома">
           </figure>
@@ -315,15 +321,16 @@
 
 
           <p>Статический блог про обучение HTML и CSS.</p>-->
-    </div>
-  </section>
+        </div>
+      </section>
 
-  <footer class="page-footer">
-    <div class="container">
-      <a class="footer-github" href="https://github.com/DennisHartstock">GitHub</a>
-      <a class="footer-email" href="mailto:dennis.hartstock@web.de">dennis.hartstock@web.de</a>
-      <a class="footer-phone" href="tel:+4915206117745">+49 152 06117745</a>
-    </div>
-  </footer>
+      <footer class="page-footer">
+        <div class="container">
+          <a class="footer-github" href="https://github.com/DennisHartstock">GitHub</a>
+          <a class="footer-email" href="mailto:dennis.hartstock@web.de">dennis.hartstock@web.de</a>
+          <a class="footer-phone" href="tel:+4915206117745">+49 152 06117745</a>
+        </div>
+      </footer>
 </body>
+
 </html>
