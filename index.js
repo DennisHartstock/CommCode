@@ -8,10 +8,11 @@ function ru() {
     document.getElementById("about_me_p3").innerText = "На данный момент я занимаюсь разработкой мобильных приложений \
     в Android Studio, потому что мне нравится создавать вещи, которые могут приносить пользу другим людям."
 
-    document.getElementById("about_me_p4").innerText = "На этой странице вы найдёте различные ресурсы, которые показались мне \
-    полезными в процессе изучения программирования."
+    document.getElementById("about_me_p4").innerText = "На этой странице вы найдёте различные ресурсы, которые показались \
+    мне полезными в процессе изучения программирования."
 
-    document.getElementById("about_me_p5").innerText = "Помимо этого я буду выкладывать здесь свои учебные проекты и мобильные приложения."
+    document.getElementById("about_me_p5").innerText = "Помимо этого я буду выкладывать здесь свои учебные проекты и \
+    мобильные приложения."
 
     document.getElementById("skills").innerText = "Мои навыки программирования \n \
     (в затраченных на обучение часах)"
@@ -24,22 +25,30 @@ function ru() {
 }
 
 function de() {
-    document.getElementById("about_me_p1").innerText = "Mein Name ist Dennis. Ich bin 2020 zum Programmieren gekommen, \
-    als unsere gesamte Welt aufgrund der Coronavirus-Pandemie in einen Abgrund der Unsicherheit und Unlogik gestürzt ist."
+    document.getElementById("about_me_p1").innerText = "Mein Name ist Dennis. Nach meiner mehrjährigen Tätigkeit \
+    im kaufmännischen Bereich strebe ich eine berufliche Veränderung an. Privat beschäftige ich mich schon lange \
+    mit dem Computer und möchte diese Leidenschaft nun endlich auch beruflich ausleben."
 
-    document.getElementById("about_me_p2").innerText = "In etwas weniger als einem Jahr habe ich einen vollständigen Java-Kurs zu JAVARUSH abgeschlossen \
-    und an den Simulatoren der HTML Academy geübt, um ein grundlegendes Verständnis des Frontends und des Layouts dieser Seite zu erlangen."
+    document.getElementById("about_me_p2").innerText = "In meinem 3-jährigen Selbststudium habe ich sehr gute \
+    Kenntnisse in Android Development erworben. Ich verfüge über fundierte Erfahrungen mit Android SDK, Kotlin, Java, XML, \
+    RESTful APIs und UI/UX-Implementierung. Zurzeit beschäftige ich mich intensiv mit Jetpack Compose. Ich bringe nicht nur \
+    wichtige Kenntnisse mit, sondern bin auch überaus motiviert, mich umfassend in neue Bereiche \
+    einzuarbeiten.\n\n Besonders hervorheben möchte ich mein gutes Zeitmanagement, mein strukturiertes Arbeiten und \
+    mein analytisches Denken. Desweiteren verfüge ich über ausgezeichnete Russisch- und gute Englisch- und \
+    Spanischkenntnisse.\n\n Ich widme mich meinen neuen Aufgaben und Herausforderungen stets mit großer Motivation und \
+    Selbsteinsatz."
 
-    document.getElementById("about_me_p3").innerText = "Ich entwickle derzeit mobile Anwendungen \
-    in Android Studio, weil ich gerne Dinge erstelle, von denen andere profitieren können."
+    document.getElementById("about_me_p3").innerText = "Ich stehe Ihrem Unternehmen ab sofort zur Verfügung. Ich strebe ein \
+    Bruttojahresgehalt in Höhe von min. 36 000 € an. \n\nFalls ich Ihr Interesse geweckt habe, kontaktieren Sie mich."
 
     document.getElementById("about_me_p4").innerText = "Auf dieser Seite finden Sie verschiedene Ressourcen, die mir \
-    nützlich beim Programmieren lernen."
+    nützlich bei meinem Selbststudium vorkamen."
 
-    document.getElementById("about_me_p5").innerText = "Außerdem werde ich hier meine Bildungsprojekte und mobilen Anwendungen veröffentlichen."
+    document.getElementById("about_me_p5").innerText = "Außerdem werde ich hier meine Bildungsprojekte und mobilen \
+    Anwendungen veröffentlichen."
 
     document.getElementById("skills").innerText = "Meine Programmierkenntnisse \n\
-    (in Trainingsstunden)"
+    (in Lernstunden)"
 
     document.getElementById("res").innerText = "Nützliche Ressourcen"
 
