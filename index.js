@@ -66,22 +66,26 @@ function de() {
 }
 
 function en() {
-    document.getElementById("about_me_p1").innerText = "My name is Dennis. I got into programming in 2020, \
-    when, due to the coronavirus pandemic, our entire world plunged into an abyss of uncertainty and illogicality."
+    document.getElementById("about_me_p1").innerText = "My name is Dennis. I am a highly motivated Android Developer \
+    with over 2 years of experience in developing native Android applications."
 
-    document.getElementById("about_me_p2").innerText = "In a little less than a year, I completed a full Java course on JAVARUSH \
-    and practiced on the HTML Academy simulators to get a basic understanding of the frontend and layout this page."
+    document.getElementById("about_me_p2").innerText = "I have a strong background in Java, Kotlin and Android SDK and \
+    libraries. My development skills also include working with databases and web services. I am comfortable working in \
+    both a team environment and independently. I am also experienced in debugging, troubleshooting and optimizing code. \
+    Furthermore, I am very well-versed in UI/UX design and have a good understanding of Material Design guidelines."
 
-    document.getElementById("about_me_p3").innerText = "I am currently developing mobile applications \
-    in Android Studio because I enjoy creating things that other people can benefit from."
+    document.getElementById("about_me_p3").innerText = "I have a passion for learning new technologies and have the \
+    ability to quickly adapt to new frameworks and tools. I am confident that my knowledge and experience can help in \
+    the development of Android applications."
 
     document.getElementById("about_me_p4").innerText = "On this page you will find various resources that seemed to me \
-    useful in the process of learning programming."
+    useful in the process of programming learning."
 
-    document.getElementById("about_me_p5").innerText = "In addition, I will post here my educational projects and mobile applications."
+    document.getElementById("about_me_p5").innerText = "In addition, I will post here my educational projects and mobile \
+    applications."
 
     document.getElementById("skills").innerText = "My programming skills \n\
-    (in hours spent on training)"
+    (in hours spent on learning)"
 
     document.getElementById("res").innerText = "Useful Resources"
 
