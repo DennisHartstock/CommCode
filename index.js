@@ -69,7 +69,7 @@ function en() {
     document.getElementById("about_me_p1").innerText = "My name is Dennis. I am a highly motivated Android Developer \
     with over 2 years of experience in developing native Android applications."
 
-    document.getElementById("about_me_p2").innerText = "I have a strong background in Java, Kotlin and Android SDK and \
+    document.getElementById("about_me_p2").innerText = "I have a strong background in Kotlin, Java and Android SDK and \
     libraries. My development skills also include working with databases and web services. I am comfortable working in \
     both a team environment and independently. I am also experienced in debugging, troubleshooting and optimizing code. \
     Furthermore, I am very well-versed in UI/UX design and have a good understanding of Material Design guidelines."

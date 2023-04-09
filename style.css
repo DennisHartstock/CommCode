@@ -128,15 +128,23 @@ a {
   background-position: left;
 }
 
-.skill_java {
+.skill-java {
   background-image: url("");
 }
 
-.skill_android-studio {
+.skill-android-studio {
   background-image: url("");
 }
 
-.skill_kotlin {
+.skill-kotlin {
+  background-image: url("");
+}
+
+.skill-dart {
+  background-image: url("");
+}
+
+.skill-flutter {
   background-image: url("");
 }
 
@@ -148,11 +156,11 @@ a {
   /* background-image: url("img/icon-css.svg"); */
 }
 
-.skill_javascript {
+.skill-javascript {
   background-image: url("");
 }
 
-.skill_react {
+.skill-react {
   background-image: url("");
 }
 
